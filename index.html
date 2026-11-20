@@ -1,881 +1,744 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio — Backend & Data Developer</title>
+    <title>Tushar Chaudhary · Backend Developer</title>
+    <meta name="description" content="Tushar Chaudhary is a backend developer who builds REST APIs, data pipelines and ML-backed services with Python, Node.js, SQL and MongoDB. His work runs in production at UNODC, FAO and the UN Office at Vienna.">
+    <meta name="author" content="Tushar Chaudhary">
+    <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#fafaf8" media="(prefers-color-scheme: light)">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tushar Chaudhary · Backend Developer">
+    <meta property="og:description" content="REST APIs, data pipelines and ML-backed services. Production work at UNODC, FAO and the UN Office at Vienna.">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2317171a'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='monospace' font-size='14' font-weight='700' fill='%234ade80'%3Etc%3C/text%3E%3C/svg%3E">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Apply saved theme before paint to avoid a flash.
+        (function () {
+            document.documentElement.classList.remove('no-js');
+            try {
+                var t = localStorage.getItem('theme');
+                if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {}
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tushar Chaudhary",
+        "jobTitle": "Backend Developer",
+        "email": "mailto:tusharchaudhary161@gmail.com",
+        "sameAs": [
+            "https://github.com/TuhsarChaudhary",
+            "https://www.linkedin.com/in/tushar-chaudhary-635781203/"
+        ],
+        "alumniOf": "Krishna Engineering College, Ghaziabad",
+        "knowsAbout": ["Python", "FastAPI", "Django", "Node.js", "Express", "SQL", "MongoDB", "pandas", "REST APIs"]
+    }
+    </script>
 </head>
 <body>
+    <!-- Icon sprite -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+        <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+        <symbol id="i-play" viewBox="0 0 24 24"><path d="m6 3 14 9-14 9V3z"/></symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+        <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><path d="M6 6.5h.01M6 17.5h.01"/></symbol>
+        <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></symbol>
+        <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></symbol>
+        <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+        <symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></symbol>
+        <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+        <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></symbol>
+        <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 2 10 5-10 5L2 7l10-5z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/></symbol>
+    </svg>
 
-    <!-- Cursor follower -->
-    <div class="cursor-glow" id="cursorGlow"></div>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="backdrop" aria-hidden="true"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">{</span> Tushar Chaudhary <span class="logo-bracket">}</span>
+    <!-- Nav -->
+    <header class="nav" id="nav">
+        <div class="container nav-inner">
+            <a href="#top" class="brand" aria-label="Tushar Chaudhary, back to top">
+                <span class="brand-mark">tc</span>
+                <span class="brand-name">Tushar Chaudhary</span>
             </a>
-            <div class="nav-links" id="navLinks">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-grid"></div>
-        <div class="hero-particles" id="heroParticles"></div>
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Available for opportunities
-            </div>
-            <h1 class="hero-title">
-                <span class="hero-line">I build</span>
-                <span class="hero-line hero-highlight">
-                    <span class="typed-text" id="typedText"></span>
-                    <span class="typed-cursor">|</span>
-                </span>
-            </h1>
-            <p class="hero-subtitle">
-                Backend & Data Developer with hands-on experience building REST APIs, 
-                data pipelines, and ML-integrated systems. Specializing in 
-                <strong>Python</strong>, <strong>Django</strong>, <strong>FastAPI</strong>, and <strong>Node.js/Express</strong>.
-            </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i> View My Work
-                </a>
-                <a href="#contact" class="btn btn-outline">
-                    <i class="fas fa-envelope"></i> Get in Touch
-                </a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number" data-count="5">0</span>
-                    <span class="stat-label">Production Projects</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-count="30">0</span><span class="stat-plus">+</span>
-                    <span class="stat-label">REST API Endpoints</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-count="3">0</span>
-                    <span class="stat-label">Tech Stacks</span>
-                </div>
+            <nav class="nav-links" id="navLinks" aria-label="Primary">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#stack">Stack</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="search-btn" id="paletteBtn" aria-label="Open command menu" aria-haspopup="dialog">
+                    <svg class="icon"><use href="#i-search"/></svg>
+                    <span class="search-label">Search</span>
+                    <kbd><span class="mod-key">Ctrl</span> K</kbd>
+                </button>
+                <button class="icon-btn theme-toggle" id="themeBtn" aria-label="Toggle colour theme">
+                    <svg class="icon moon"><use href="#i-moon"/></svg>
+                    <svg class="icon sun"><use href="#i-sun"/></svg>
+                </button>
+                <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+                    <svg class="icon"><use href="#i-menu"/></svg>
+                </button>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="mouse-wheel"></div>
-            </div>
-            <span>Scroll to explore</span>
-        </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;about&gt;</span>
-                <h2 class="section-title">Who I Am</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p class="about-intro">
-                        I'm a backend-focused developer who loves turning complex problems into 
-                        clean, well-documented APIs and data pipelines. I've worked across the 
-                        full stack on real-world projects — from building REST APIs with 
-                        <strong>JWT authentication</strong> and <strong>role-based access control</strong>, 
-                        to writing <strong>MongoDB aggregation pipelines</strong> and 
-                        <strong>SQL migrations with Alembic</strong>.
-                    </p>
-                    <p>
-                        My most recent work involves an <strong>AI-powered CV shortlisting system</strong> 
-                        where I built the entire backend: FastAPI endpoints, SQLAlchemy ORM models, 
-                        pandas data processing, and integration with SBERT & KeyBERT for 
-                        semantic resume ranking. I'm passionate about data engineering, ML tooling, 
-                        and writing code that's maintainable and well-tested.
-                    </p>
-                    <p>
-                        I actively use <strong>AI tools like Claude and Cursor</strong> in my development 
-                        workflow — for code reviews, debugging, and rapid prototyping. I believe in 
-                        augmenting my skills with the best tools available.
-                    </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-server"></i>
-                            <span>Backend-first mindset</span>
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero" id="top">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <div class="status-pill">
+                            <span class="pulse" aria-hidden="true"></span>
+                            Open to backend &amp; data roles<span class="pill-extra"> · Bangalore or remote</span>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL & NoSQL databases</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-brain"></i>
-                            <span>ML/Data integration</span>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-code-branch"></i>
-                            <span>Git workflow expert</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-terminal">
-                    <div class="terminal">
-                        <div class="terminal-header">
-                            <div class="terminal-dots">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
-                            </div>
-                            <span class="terminal-title">about_me.py</span>
-                        </div>
-                        <div class="terminal-body">
-                            <pre><code><span class="kw">class</span> <span class="cls">Developer</span>:
-    <span class="kw">def</span> <span class="fn">__init__</span>(<span class="var">self</span>):
-        <span class="var">self</span>.role = <span class="str">"Backend & Data Dev"</span>
-        <span class="var">self</span>.languages = [
-            <span class="str">"Python"</span>, <span class="str">"JavaScript"</span>,
-            <span class="str">"TypeScript"</span>, <span class="str">"SQL"</span>
-        ]
-        <span class="var">self</span>.backend = {
-            <span class="str">"frameworks"</span>: [<span class="str">"Django"</span>, <span class="str">"FastAPI"</span>,
-                           <span class="str">"Express.js"</span>],
-            <span class="str">"databases"</span>:  [<span class="str">"PostgreSQL"</span>,
-                           <span class="str">"MongoDB"</span>, <span class="str">"SQLite"</span>],
-            <span class="str">"tools"</span>:      [<span class="str">"Docker"</span>, <span class="str">"Git"</span>,
-                           <span class="str">"Swagger"</span>, <span class="str">"Alembic"</span>]
-        }
-        <span class="var">self</span>.ai_tools = [
-            <span class="str">"Claude"</span>, <span class="str">"Cursor"</span>,
-            <span class="str">"GitHub Copilot"</span>
-        ]
-
-    <span class="kw">def</span> <span class="fn">current_focus</span>(<span class="var">self</span>):
-        <span class="kw">return</span> [
-            <span class="str">"Data Engineering"</span>,
-            <span class="str">"ML Pipelines"</span>,
-            <span class="str">"API Design"</span>
-        ]</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section section-dark" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;skills&gt;</span>
-                <h2 class="section-title">Tech Arsenal</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-category-header">
-                        <i class="fas fa-server"></i>
-                        <h3>Backend</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="90">
-                            <span class="skill-name">Python / Django</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="88">
-                            <span class="skill-name">FastAPI</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">Node.js / Express</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="82">
-                            <span class="skill-name">REST API Design</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-header">
-                        <i class="fas fa-database"></i>
-                        <h3>Data & Databases</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">SQL / PostgreSQL</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="88">
-                            <span class="skill-name">MongoDB / Mongoose</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="80">
-                            <span class="skill-name">SQLAlchemy / Alembic</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="75">
-                            <span class="skill-name">Pandas / Data Processing</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-header">
-                        <i class="fas fa-tools"></i>
-                        <h3>DevOps & Tools</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="85">
-                            <span class="skill-name">Git / GitHub</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="70">
-                            <span class="skill-name">Docker</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="78">
-                            <span class="skill-name">Swagger / OpenAPI</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="82">
-                            <span class="skill-name">Claude / Cursor / AI Tools</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-header">
-                        <i class="fas fa-brain"></i>
-                        <h3>ML & Data Engineering</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item" data-level="75">
-                            <span class="skill-name">SBERT / Transformers</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:75%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="72">
-                            <span class="skill-name">KeyBERT / NLP</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="70">
-                            <span class="skill-name">Scikit-learn</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
-                        </div>
-                        <div class="skill-item" data-level="68">
-                            <span class="skill-name">Data Pipelines / ETL</span>
-                            <div class="skill-bar"><div class="skill-fill" style="--w:68%"></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;projects&gt;</span>
-                <h2 class="section-title">What I've Built</h2>
-                <div class="section-line"></div>
-                <p class="section-desc">Production systems deployed and used by real organizations</p>
-            </div>
-
-            <!-- Project 0: SLA Platform -->
-            <div class="project-card featured">
-                <div class="project-label">
-                    <i class="fas fa-fire"></i> Latest — Enterprise Platform (Soft Launch)
-                </div>
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3 class="project-title">SLA Platform — UN Service Level Agreement Management</h3>
-                        <p class="project-desc">
-                            An <strong>enterprise-grade platform</strong> for managing Service Level Agreements, 
-                            proposals, projects, budgeting, and multi-step approval workflows for a 
-                            <strong>United Nations agency</strong>. Features 14 feature modules, 32 reusable 
-                            UI components, full i18n support, and a sophisticated workflow engine with 
-                            role-based approvals across 6 organizational levels. <strong>Just completed 
-                            soft launch.</strong>
+                        <h1>I build the <span class="serif">APIs</span> and data pipelines behind real products.</h1>
+                        <p class="hero-lede">
+                            I'm <strong>Tushar Chaudhary</strong>, a backend-focused developer in India. Since 2025 I've shipped code into five production platforms, including tools used by <strong>UNODC</strong>, <strong>FAO</strong> and the <strong>UN Office at Vienna</strong>. I write Python and Node.js on the server and SQL and MongoDB underneath. I also know enough Angular to understand what a frontend needs from an API.
                         </p>
-                        <div class="project-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>14 feature modules: SLA management, proposals, cost & budgeting, projects, meetings, documents, workflows, leads, funding codes, logs, admin & payments</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Multi-step approval workflow engine — PM → HQ GRC → Legal → Finance → Client → Director with submit/approve/return/reject actions</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>SLA clause editor with revision diffs, digital signing flow, instalment & billing milestone tracking</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>32 shared UI components — custom design system with data tables, charts, form controls, drawers, toasts, skeletons</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>PDF export via pdfmake with HTML-to-PDF parser (rich text, images, tables), Excel export via ExcelJS with smart formatting</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Full i18n with ngx-translate, Angular 21 signals & computed(), Vitest unit tests, Tailwind CSS 4, PrimeNG 21</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag primary">Angular 21</span>
-                            <span class="tech-tag primary">TypeScript</span>
-                            <span class="tech-tag">Tailwind CSS 4</span>
-                            <span class="tech-tag">PrimeNG 21</span>
-                            <span class="tech-tag accent">pdfmake</span>
-                            <span class="tech-tag accent">ExcelJS</span>
-                            <span class="tech-tag">Quill Editor</span>
-                            <span class="tech-tag">ngx-translate</span>
-                            <span class="tech-tag">Vitest</span>
-                            <span class="tech-tag">RxJS</span>
-                            <span class="tech-tag">Signals</span>
+                        <div class="hero-cta">
+                            <a href="#projects" class="btn btn-primary">
+                                See my work
+                                <svg class="icon"><use href="#i-right"/></svg>
+                            </a>
+                            <button class="btn btn-ghost" data-copy-email>
+                                <svg class="icon"><use href="#i-copy"/></svg>
+                                Copy email
+                            </button>
+                            <a href="https://github.com/TuhsarChaudhary" target="_blank" rel="noopener" class="btn btn-ghost btn-icon" aria-label="GitHub profile">
+                                <svg class="icon icon-fill"><use href="#i-github"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/tushar-chaudhary-635781203/" target="_blank" rel="noopener" class="btn btn-ghost btn-icon" aria-label="LinkedIn profile">
+                                <svg class="icon icon-fill"><use href="#i-linkedin"/></svg>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-visual">
-                        <div class="workflow-diagram">
-                            <div class="workflow-title">Approval Workflow Engine</div>
-                            <div class="workflow-steps">
-                                <div class="wf-step active">
-                                    <div class="wf-icon"><i class="fas fa-user-edit"></i></div>
-                                    <span>PM Draft</span>
-                                </div>
-                                <div class="wf-connector"></div>
-                                <div class="wf-step">
-                                    <div class="wf-icon"><i class="fas fa-shield-alt"></i></div>
-                                    <span>GRC Review</span>
-                                </div>
-                                <div class="wf-connector"></div>
-                                <div class="wf-step">
-                                    <div class="wf-icon"><i class="fas fa-gavel"></i></div>
-                                    <span>Legal</span>
-                                </div>
-                                <div class="wf-connector"></div>
-                                <div class="wf-step">
-                                    <div class="wf-icon"><i class="fas fa-coins"></i></div>
-                                    <span>Finance</span>
-                                </div>
-                                <div class="wf-connector"></div>
-                                <div class="wf-step">
-                                    <div class="wf-icon"><i class="fas fa-building"></i></div>
-                                    <span>Client</span>
-                                </div>
-                                <div class="wf-connector"></div>
-                                <div class="wf-step">
-                                    <div class="wf-icon"><i class="fas fa-signature"></i></div>
-                                    <span>Director</span>
-                                </div>
-                            </div>
-                            <div class="workflow-modules">
-                                <span class="wf-mod">SLA</span>
-                                <span class="wf-mod">Proposals</span>
-                                <span class="wf-mod">Budgets</span>
-                                <span class="wf-mod">Projects</span>
-                                <span class="wf-mod">Meetings</span>
-                                <span class="wf-mod">Leads</span>
-                                <span class="wf-mod">Documents</span>
-                                <span class="wf-mod">Payments</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Project 1: SortCV -->
-            <div class="project-card featured">
-                <div class="project-label">
-                    <i class="fas fa-star"></i> Featured — ML + Backend
-                </div>
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3 class="project-title">SortCV — AI-Powered Resume Shortlisting</h3>
-                        <p class="project-desc">
-                            Built the <strong>entire backend</strong> for an intelligent CV screening platform that 
-                            parses bulk resumes (PDF), extracts structured data using LLM-powered extraction, 
-                            and ranks candidates against job descriptions using <strong>SBERT embeddings</strong> 
-                            and <strong>cosine similarity scoring</strong>. The system supports weighted ranking 
-                            across experience, qualifications, and skills — cutting HR screening time by ~70%.
-                        </p>
-                        <div class="project-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>FastAPI REST endpoints with async/await + thread offloading for CPU-heavy ML inference</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>SQLAlchemy ORM with Alembic migrations — ResumePDF, JobDescriptionPDF, User models with relationships</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>SBERT (all-MiniLM-L12-v2) + KeyBERT for semantic JD-to-resume matching</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>File deduplication via SHA-256 hashing, JWT auth with role-based access (admin/cv_access)</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Pandas-powered data processing, filtering, and CSV export pipelines</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Repository pattern + service layer architecture for clean separation of concerns</span>
-                            </div>
+                    <!-- API console -->
+                    <div class="console" aria-label="Interactive API console about Tushar">
+                        <div class="console-bar">
+                            <span class="method m-get">GET</span>
+                            <span class="console-url" id="consoleUrl"><span class="host">api.tushar.dev</span>/v1/me</span>
+                            <button class="send-btn" id="consoleSend" aria-label="Send request again">
+                                <svg class="icon icon-fill"><use href="#i-play"/></svg>
+                                Send
+                            </button>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag primary">Python</span>
-                            <span class="tech-tag primary">FastAPI</span>
-                            <span class="tech-tag">SQLAlchemy</span>
-                            <span class="tech-tag">Alembic</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag accent">SBERT</span>
-                            <span class="tech-tag accent">KeyBERT</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">Pydantic</span>
-                            <span class="tech-tag">JWT / bcrypt</span>
+                        <div class="console-tabs" role="tablist" aria-label="Endpoints">
+                            <button class="console-tab" role="tab" aria-selected="true" data-endpoint="me">/me</button>
+                            <button class="console-tab" role="tab" aria-selected="false" data-endpoint="stack">/stack</button>
+                            <button class="console-tab" role="tab" aria-selected="false" data-endpoint="now">/now</button>
+                            <button class="console-tab" role="tab" aria-selected="false" data-endpoint="hire">/hire</button>
                         </div>
-                    </div>
-                    <div class="project-visual">
-                        <div class="architecture-diagram">
-                            <div class="arch-title">System Architecture</div>
-                            <div class="arch-flow">
-                                <div class="arch-node upload">
-                                    <i class="fas fa-file-pdf"></i>
-                                    <span>PDF Upload</span>
-                                </div>
-                                <div class="arch-arrow"><i class="fas fa-arrow-right"></i></div>
-                                <div class="arch-node process">
-                                    <i class="fas fa-cogs"></i>
-                                    <span>LLM Extract</span>
-                                </div>
-                                <div class="arch-arrow"><i class="fas fa-arrow-right"></i></div>
-                                <div class="arch-node store">
-                                    <i class="fas fa-database"></i>
-                                    <span>PostgreSQL</span>
-                                </div>
-                            </div>
-                            <div class="arch-flow">
-                                <div class="arch-node jd">
-                                    <i class="fas fa-file-alt"></i>
-                                    <span>JD Upload</span>
-                                </div>
-                                <div class="arch-arrow"><i class="fas fa-arrow-right"></i></div>
-                                <div class="arch-node ml">
-                                    <i class="fas fa-brain"></i>
-                                    <span>SBERT Rank</span>
-                                </div>
-                                <div class="arch-arrow"><i class="fas fa-arrow-right"></i></div>
-                                <div class="arch-node result">
-                                    <i class="fas fa-trophy"></i>
-                                    <span>Ranked List</span>
-                                </div>
-                            </div>
+                        <div class="console-meta" aria-live="polite">
+                            <span><span class="ok" id="consoleStatus">200 OK</span></span>
+                            <span id="consoleTime">38 ms</span>
+                            <span>application/json</span>
                         </div>
+                        <pre class="console-body" id="consoleBody"></pre>
                     </div>
                 </div>
-            </div>
 
-            <!-- Project 2: Clean Milk Backend -->
-            <div class="project-card">
-                <div class="project-label">
-                    <i class="fas fa-leaf"></i> Backend API — UN FAO Initiative
-                </div>
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3 class="project-title">Clean Milk — Dairy Farm Assessment Platform</h3>
-                        <p class="project-desc">
-                            Built the <strong>complete backend API</strong> for a dairy hygiene assessment 
-                            application supporting <strong>UN FAO's Clean Milk initiative</strong>. The system 
-                            enables field evaluators to assess farms across multiple hygiene categories, 
-                            with GPS-tracked evaluations, image uploads, and comprehensive analytics 
-                            dashboards with state/district-level aggregation.
-                        </p>
-                        <div class="project-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Express.js REST API with 9 route modules — auth, farms, evaluations, analytics, assignments, etc.</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>MongoDB with Mongoose — complex aggregation pipelines for state/district/farm analytics</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>JWT auth with OTP verification, role-based permissions (admin/evaluator/farmer), rate limiting with Helmet</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Swagger/OpenAPI documentation with 20+ schema definitions — fully documented API</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Multer + Sharp image processing, baseline/endline evaluation comparison with improvement tracking</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag primary">Node.js</span>
-                            <span class="tech-tag primary">Express.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Mongoose</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">Swagger</span>
-                            <span class="tech-tag">Multer</span>
-                            <span class="tech-tag">Helmet</span>
-                            <span class="tech-tag">Sharp</span>
-                        </div>
+                <div class="stats reveal" role="list">
+                    <div class="stat" role="listitem">
+                        <div class="stat-num"><span data-count="5">5</span></div>
+                        <div class="stat-label">production platforms I've shipped code into</div>
                     </div>
-                    <div class="project-visual">
-                        <div class="api-showcase">
-                            <div class="api-title">API Endpoints</div>
-                            <div class="api-endpoint">
-                                <span class="method post">POST</span>
-                                <span class="path">/api/auth/register</span>
-                            </div>
-                            <div class="api-endpoint">
-                                <span class="method post">POST</span>
-                                <span class="path">/api/auth/verify-otp</span>
-                            </div>
-                            <div class="api-endpoint">
-                                <span class="method get">GET</span>
-                                <span class="path">/api/farms</span>
-                            </div>
-                            <div class="api-endpoint">
-                                <span class="method post">POST</span>
-                                <span class="path">/api/evaluations/start</span>
-                            </div>
-                            <div class="api-endpoint">
-                                <span class="method get">GET</span>
-                                <span class="path">/api/analytics/top-states</span>
-                            </div>
-                            <div class="api-endpoint">
-                                <span class="method get">GET</span>
-                                <span class="path">/api/analytics/district-compare</span>
-                            </div>
-                            <div class="api-endpoint">
-                                <span class="method post">POST</span>
-                                <span class="path">/api/assignments</span>
-                            </div>
-                            <div class="api-endpoint">
-                                <span class="method get">GET</span>
-                                <span class="path">/api/users?role=evaluator</span>
-                            </div>
-                        </div>
+                    <div class="stat" role="listitem">
+                        <div class="stat-num"><span data-count="50">50</span><sup>+</sup></div>
+                        <div class="stat-label">REST endpoints I designed and built</div>
+                    </div>
+                    <div class="stat" role="listitem">
+                        <div class="stat-num"><span data-count="277">277</span></div>
+                        <div class="stat-label">commits since Aug 2025, mostly in private repos</div>
+                    </div>
+                    <div class="stat" role="listitem">
+                        <div class="stat-num"><span data-count="3">3</span></div>
+                        <div class="stat-label">UN entities using my work: UNOV, FAO, UNODC</div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Project 3: SAMS -->
-            <div class="project-card">
-                <div class="project-label">
-                    <i class="fas fa-graduation-cap"></i> Full-Stack — Education ERP
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="route"><span class="method m-get">GET</span><span class="path">/about</span></div>
+                    <h2>Backend first, with <span class="serif">frontend empathy</span>.</h2>
                 </div>
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3 class="project-title">SAMS — Student Academic Management System</h3>
-                        <p class="project-desc">
-                            A comprehensive academic management ERP with <strong>15+ modules</strong> covering 
-                            the entire student lifecycle — from enrollment and course management to attendance 
-                            tracking, grading, library management, timetable scheduling, and certificate generation. 
-                            Built to handle multi-role access for admins, teachers, and students.
-                        </p>
-                        <div class="project-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Angular 19 frontend with modular architecture — 15+ feature modules with lazy loading</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Attendance module: dashboard analytics, marking system, history views with calendar integration (FullCalendar)</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Library management with analytics, borrowing system, and CRUD operations</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>ECharts data visualization, jsPDF report generation, XLSX data export</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Angular 19</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Bootstrap 5</span>
-                            <span class="tech-tag">ECharts</span>
-                            <span class="tech-tag">FullCalendar</span>
-                            <span class="tech-tag">RxJS</span>
-                            <span class="tech-tag">jsPDF</span>
-                        </div>
+                <div class="about-grid">
+                    <div class="about-copy reveal">
+                        <p>I got into backend work because I like systems you can reason about. A request comes in, gets checked, does one job well and returns something predictable. Most of my time goes into that layer: <strong>designing endpoints, modelling data, writing aggregation queries and moving slow work off the request path</strong>.</p>
+                        <p>I've also spent plenty of time on the other side of the API. On WISH, SOMA and the UNODC portal I was the one consuming backend endpoints. So I know how much a clear contract, a consistent error shape and good docs save the person building the UI.</p>
+                        <p>I use <strong>Claude and Cursor every day</strong> to scaffold code, read unfamiliar codebases, draft tests and review diffs. I still read and understand every line I ship.</p>
+                        <p><strong>Education:</strong> B.Tech in Information Technology, Krishna Engineering College, Ghaziabad (AKTU), 2020–2024.</p>
                     </div>
-                    <div class="project-visual">
-                        <div class="modules-grid">
-                            <div class="module-card"><i class="fas fa-users"></i><span>Users</span></div>
-                            <div class="module-card"><i class="fas fa-book-open"></i><span>Courses</span></div>
-                            <div class="module-card"><i class="fas fa-clipboard-check"></i><span>Attendance</span></div>
-                            <div class="module-card"><i class="fas fa-graduation-cap"></i><span>Grades</span></div>
-                            <div class="module-card"><i class="fas fa-library"></i><span>Library</span></div>
-                            <div class="module-card"><i class="fas fa-calendar-alt"></i><span>Timetable</span></div>
-                            <div class="module-card"><i class="fas fa-id-card"></i><span>Enrollment</span></div>
-                            <div class="module-card"><i class="fas fa-certificate"></i><span>Certificates</span></div>
-                            <div class="module-card"><i class="fas fa-chart-bar"></i><span>Dashboard</span></div>
+                    <div class="principles">
+                        <div class="principle reveal">
+                            <span class="principle-num">01</span>
+                            <div>
+                                <h3>Contract first</h3>
+                                <p>Swagger/OpenAPI docs ship with the endpoint, so web and mobile teams can build in parallel instead of waiting on me.</p>
+                            </div>
+                        </div>
+                        <div class="principle reveal">
+                            <span class="principle-num">02</span>
+                            <div>
+                                <h3>Validate at the edge</h3>
+                                <p>Joi or Pydantic schemas on every input, one central error handler and one error shape across the API.</p>
+                            </div>
+                        </div>
+                        <div class="principle reveal">
+                            <span class="principle-num">03</span>
+                            <div>
+                                <h3>Keep the request path fast</h3>
+                                <p>ML inference, file processing and other heavy work run off the event loop, so one big job doesn't stall everyone else.</p>
+                            </div>
+                        </div>
+                        <div class="principle reveal">
+                            <span class="principle-num">04</span>
+                            <div>
+                                <h3>Leave it readable</h3>
+                                <p>Routes, services and repositories in separate layers, small modules, and commit messages that say why.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Project 4: Transparency Portal -->
-            <div class="project-card">
-                <div class="project-label">
-                    <i class="fas fa-globe"></i> Data Visualization — International
+        <!-- Experience -->
+        <section class="section" id="experience">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="route"><span class="method m-get">GET</span><span class="path">/experience</span></div>
+                    <h2>Where I've been <span class="serif">shipping</span>.</h2>
                 </div>
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3 class="project-title">Transparency Portal — UNODC Partner Analytics</h3>
-                        <p class="project-desc">
-                            A public-facing data transparency dashboard for <strong>UNODC (United Nations Office 
-                            on Drugs and Crime)</strong> partner contributions. Features interactive maps, 
-                            real-time contribution tracking, and partner analytics with 
-                            <strong>Leaflet.js geospatial maps</strong> and <strong>ECharts visualizations</strong>.
-                        </p>
-                        <div class="project-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Country contribution heat map using Leaflet.js — interactive geospatial data visualization</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>ECharts (ngx-echarts) for contribution trends, partner dashboards, and donut/bar charts</span>
-                            </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>PrimeNG UI components with Angular 19, service-based data fetching architecture</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Angular 19</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag accent">Leaflet.js</span>
-                            <span class="tech-tag accent">ECharts</span>
-                            <span class="tech-tag">PrimeNG</span>
-                            <span class="tech-tag">Bootstrap 5</span>
-                        </div>
-                    </div>
-                    <div class="project-visual">
-                        <div class="globe-visual">
-                            <div class="globe-ring"></div>
-                            <div class="globe-ring ring-2"></div>
-                            <div class="globe-center">
-                                <i class="fas fa-earth-americas"></i>
-                            </div>
-                            <div class="globe-label">Interactive<br>Partner Map</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Project 5: Clean Milk Frontend -->
-            <div class="project-card">
-                <div class="project-label">
-                    <i class="fas fa-mobile-alt"></i> Frontend — Companion App
+                <div class="timeline">
+                    <article class="job reveal">
+                        <div class="job-when">
+                            2025 — Present
+                            <div class="now">Current</div>
+                        </div>
+                        <div>
+                            <h3>Software Developer</h3>
+                            <p class="job-org">Product team building platforms for UN agencies and programmes</p>
+                            <ul>
+                                <li>Designed and built the <strong>Clean Milk REST API</strong> on my own: 40+ endpoints, OTP + JWT auth, role permissions and MongoDB analytics for an FAO dairy-hygiene pilot.</li>
+                                <li>Main contributor to <strong>WISH</strong>, UNOV's lead-to-SLA platform (87 commits). I built leads, proposals, cost estimation, audit logs, permissions and the digital SLA sign-off flow.</li>
+                                <li>Rebuilt the overview and partner pages of the <strong>UNODC Transparency Portal</strong> from new Figma designs, responsive down to small phones.</li>
+                                <li>Primary frontend developer on <strong>SOMA</strong>, a Moodle-backed academic portal. I built role-based dashboards, attendance, timetables, the library module and social login.</li>
+                                <li>Smaller contributions to translation/RTL support on a multilingual platform and to the auth flow of an internal project-management app.</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="job reveal">
+                        <div class="job-when">2020 — 2024</div>
+                        <div>
+                            <h3>B.Tech, Information Technology</h3>
+                            <p class="job-org">Krishna Engineering College, Ghaziabad · Dr. A.P.J. Abdul Kalam Technical University</p>
+                            <ul>
+                                <li>This is where I picked up Python, SQL and data structures, and started building side projects in Django and Flask.</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
-                <div class="project-content">
-                    <div class="project-info">
-                        <h3 class="project-title">Clean Milk Frontend — Field Assessment UI</h3>
-                        <p class="project-desc">
-                            The companion frontend application for the Clean Milk assessment system, 
-                            enabling field evaluators to conduct on-ground farm assessments with 
-                            offline-first capability, GPS tracking, and photo evidence capture. 
-                            Designed for use in rural areas with limited connectivity.
-                        </p>
-                        <div class="project-features">
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Full CRUD assessment workflow with multi-step form wizards</span>
+
+                <div class="activity reveal">
+                    <div class="activity-head">
+                        <div>
+                            <h3>Commit activity across 13 repositories</h3>
+                            <p>Every commit I've authored since Aug 2025, counted from local git history. Most of these repos are private, so very little of this shows on my public GitHub graph.</p>
+                        </div>
+                        <div class="legend" aria-hidden="true">
+                            Less
+                            <i style="background:var(--heat-0)"></i>
+                            <i style="background:var(--heat-1)"></i>
+                            <i style="background:var(--heat-2)"></i>
+                            <i style="background:var(--heat-3)"></i>
+                            <i style="background:var(--heat-4)"></i>
+                            More
+                        </div>
+                    </div>
+                    <svg class="heatmap" id="heatmap" role="img" aria-label="Commit heatmap: 277 commits between August 2025 and November 2026"></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="projects-toolbar">
+                    <div class="section-head reveal" style="margin-bottom:0">
+                        <div class="route"><span class="method m-get">GET</span><span class="path">/projects?sort=impact</span></div>
+                        <h2>Things I've <span class="serif">built and shipped</span>.</h2>
+                        <p class="section-sub">Backend case studies first, then the production platforms I've worked on, then side projects.</p>
+                    </div>
+                    <div class="filters reveal" role="group" aria-label="Filter projects">
+                        <button class="filter" data-filter="all" aria-pressed="true">All<span class="count"></span></button>
+                        <button class="filter" data-filter="backend" aria-pressed="false">Backend<span class="count"></span></button>
+                        <button class="filter" data-filter="platform" aria-pressed="false">Platforms<span class="count"></span></button>
+                        <button class="filter" data-filter="side" aria-pressed="false">Side<span class="pill-extra"> projects</span><span class="count"></span></button>
+                    </div>
+                </div>
+
+                <div class="private-note reveal">
+                    <svg class="icon"><use href="#i-lock"/></svg>
+                    <span>Most of my professional code belongs to the organisations I build for and lives in <strong>private repositories</strong>. Live links are included where the product is public. I'm happy to walk through the architecture and decisions behind any of them on a call.</span>
+                </div>
+
+                <div class="project-list">
+                    <div class="group-label" data-group="backend">Backend case studies</div>
+
+                    <!-- Clean Milk API -->
+                    <article class="project case reveal" id="clean-milk" data-cat="backend">
+                        <div class="case-body">
+                            <div class="p-meta">
+                                <span class="badge badge-pilot">In pilot</span>
+                                <span class="badge">FAO</span>
+                                <span class="badge">Sole backend dev</span>
                             </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>GPS-tracked evaluations with location validation</span>
+                            <h3>Clean Milk API</h3>
+                            <p class="p-role">Node.js · Express · MongoDB</p>
+                            <p class="p-summary">This is the backend behind a dairy-hygiene scorecard. Field evaluators audit farms on their phones, and admins compare states, districts and milk-collection centres to see where hygiene is improving.</p>
+                            <ul class="p-points">
+                                <li><strong>9 route modules and 40+ endpoints</strong>, all documented in Swagger, so the web and mobile apps could integrate without waiting on me.</li>
+                                <li><strong>Phone OTP login</strong> that issues JWT access tokens, with refresh tokens hashed at rest. JWT checks run on every protected router, plus permission checks on admin actions.</li>
+                                <li><strong>Evaluation workflow:</strong> start, score each category, then submit. Farm photos are resized with Sharp before storage.</li>
+                                <li><strong>Analytics built on aggregation pipelines:</strong> top states, districts and farms, score trends, and baseline vs follow-up comparisons, all paginated.</li>
+                                <li>Joi validation, Helmet, rate-limited OTP endpoints and one global error handler. I also shipped features in the admin web app: evaluation views, admin-only deletes and infinite-scroll lists.</li>
+                            </ul>
+                            <div class="chips">
+                                <span class="chip">Node.js</span><span class="chip">Express 5</span><span class="chip">MongoDB</span><span class="chip">Mongoose</span><span class="chip">JWT</span><span class="chip">Joi</span><span class="chip">Multer</span><span class="chip">Sharp</span><span class="chip">Swagger</span>
                             </div>
-                            <div class="feature">
-                                <i class="fas fa-check-circle"></i>
-                                <span>Integrated with Clean Milk Backend API — seamless data sync</span>
+                            <div class="p-links">
+                                <a class="link-btn" href="https://unmol.org/login" target="_blank" rel="noopener">Live app <svg class="icon"><use href="#i-arrow"/></svg></a>
+                                <span class="link-btn is-muted"><svg class="icon"><use href="#i-lock"/></svg> Code is private</span>
                             </div>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">REST API Integration</span>
-                            <span class="tech-tag">Responsive Design</span>
+                        <div class="case-visual">
+                            <div class="v-tabs" role="tablist" aria-label="Clean Milk details">
+                                <button class="v-tab" role="tab" aria-selected="true" data-panel="cm-flow">Request lifecycle</button>
+                                <button class="v-tab" role="tab" aria-selected="false" data-panel="cm-eps">Endpoints</button>
+                                <button class="v-tab" role="tab" aria-selected="false" data-panel="cm-agg">Aggregation</button>
+                            </div>
+                            <div class="v-panel active" id="cm-flow" role="tabpanel">
+                                <div class="flow" data-flow>
+                                    <div class="flow-req"><span class="method m-patch">PATCH</span>/api/evaluations/:id/category</div>
+                                    <div class="flow-step">helmet · cors · json<span class="why">secure headers</span></div>
+                                    <div class="flow-step">authMiddleware<span class="why">verify the JWT</span></div>
+                                    <div class="flow-step">upload.any()<span class="why">multer + sharp resize</span></div>
+                                    <div class="flow-step">submitCategoryAnswers<span class="why">validate &amp; score</span></div>
+                                    <div class="flow-step">Mongoose → MongoDB<span class="why">persist</span></div>
+                                    <div class="flow-step">errorHandler<span class="why">one error shape on throw</span></div>
+                                    <div class="flow-res"><span class="ok">200 OK</span>{ success: true, … }</div>
+                                </div>
+                            </div>
+                            <div class="v-panel" id="cm-eps" role="tabpanel">
+                                <div class="endpoints">
+                                    <div class="ep"><span class="method m-post">POST</span><span class="ep-path">/api/evaluations/start</span></div>
+                                    <div class="ep"><span class="method m-patch">PATCH</span><span class="ep-path">/api/evaluations/<em>:evaluationId</em>/category</span></div>
+                                    <div class="ep"><span class="method m-patch">PATCH</span><span class="ep-path">/api/evaluations/submit/<em>:evaluationId</em></span></div>
+                                    <div class="ep"><span class="method m-put">PUT</span><span class="ep-path">/api/assignments/<em>:assignmentId</em>/status</span></div>
+                                    <div class="ep"><span class="method m-get">GET</span><span class="ep-path">/api/analytics/top-states</span></div>
+                                    <div class="ep"><span class="method m-get">GET</span><span class="ep-path">/api/analytics/evaluation-score-trend</span></div>
+                                    <div class="ep"><span class="method m-get">GET</span><span class="ep-path">/api/analytics/comparative/district-comparison</span></div>
+                                    <div class="ep"><span class="method m-get">GET</span><span class="ep-path">/api/locations/states/<em>:stateCode</em>/districts</span></div>
+                                    <div class="ep"><span class="method m-post">POST</span><span class="ep-path">/api/questions/upload-image</span></div>
+                                    <div class="ep-more">+ 30 more · documented at /api-docs</div>
+                                </div>
+                            </div>
+                            <div class="v-panel" id="cm-agg" role="tabpanel">
+<pre class="code"><code><span class="c">// Top states by average score (simplified)</span>
+<span class="k">const</span> pipeline = [
+  { $match: { status: <span class="s">"submitted"</span> } },
+  { $group: {
+      _id: <span class="s">"$stateCode"</span>,
+      avgScore: { $avg: <span class="s">"$totalScore"</span> },
+      evaluations: { $sum: <span class="t">1</span> },
+  } },
+  { $match: { evaluations: { $gte: minEvaluations } } },
+  { $sort: { avgScore: <span class="t">-1</span> } },
+  { $skip: skip }, { $limit: limit },
+  { $lookup: {
+      from: <span class="s">"states"</span>, localField: <span class="s">"_id"</span>,
+      foreignField: <span class="s">"state_code"</span>, as: <span class="s">"state"</span>,
+  } },
+];</code></pre>
+                                <p class="code-cap">The total count runs as a separate pipeline, so pagination stays accurate.</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- SortCV -->
+                    <article class="project case reveal" id="sortcv" data-cat="backend">
+                        <div class="case-body">
+                            <div class="p-meta">
+                                <span class="badge badge-live">Public repo</span>
+                                <span class="badge">ML</span>
+                                <span class="badge">Backend + ranking module</span>
+                            </div>
+                            <h3>SortCV</h3>
+                            <p class="p-role">Python · FastAPI · SBERT</p>
+                            <p class="p-summary">A resume-screening tool for recruiters. Upload a stack of CVs, filter a long list, then rank a shortlist against a job description by meaning instead of exact keyword matches.</p>
+                            <ul class="p-points">
+                                <li><strong>Long-listing:</strong> pdfminer extracts text from each CV. pandas turns it into a table of experience, degree and skills that recruiters can filter and export as CSV.</li>
+                                <li><strong>Short-listing:</strong> Sentence-BERT embeds each CV and the JD, and KeyBERT pulls out key skills. Candidates are ranked by weighted cosine similarity, with the weights set by the recruiter.</li>
+                                <li><strong>SHA-256 file hashing</strong> skips CVs and JDs that were already processed.</li>
+                                <li><strong>Model inference runs in <code>asyncio.to_thread</code></strong>, so one large batch doesn't block other requests.</li>
+                                <li>SQLAlchemy models with <strong>Alembic migrations</strong>, OTP two-step login, password reset and a per-user CV-access flag.</li>
+                                <li>Middleware logs every response time and <strong>emails a traceback</strong> when an endpoint throws.</li>
+                            </ul>
+                            <div class="chips">
+                                <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">SQLAlchemy</span><span class="chip">Alembic</span><span class="chip">pandas</span><span class="chip">Sentence-Transformers</span><span class="chip">KeyBERT</span><span class="chip">scikit-learn</span><span class="chip">pdfminer</span>
+                            </div>
+                            <div class="p-links">
+                                <a class="link-btn" href="https://github.com/TuhsarChaudhary/SortCv" target="_blank" rel="noopener"><svg class="icon icon-fill"><use href="#i-github"/></svg> View code <svg class="icon"><use href="#i-arrow"/></svg></a>
+                            </div>
+                        </div>
+                        <div class="case-visual">
+                            <div class="v-tabs" role="tablist" aria-label="SortCV details">
+                                <button class="v-tab" role="tab" aria-selected="true" data-panel="sc-pipe">Pipeline</button>
+                                <button class="v-tab" role="tab" aria-selected="false" data-panel="sc-code">Code</button>
+                                <button class="v-tab" role="tab" aria-selected="false" data-panel="sc-eps">Endpoints</button>
+                            </div>
+                            <div class="v-panel active" id="sc-pipe" role="tabpanel">
+                                <div class="pipeline">
+                                    <div class="pipe"><div><b>Upload CVs (PDF)</b><span>Hash each file with SHA-256 and skip it if already seen</span></div></div>
+                                    <div class="pipe"><div><b>Extract &amp; structure</b><span>pdfminer → regex → pandas DataFrame</span></div></div>
+                                    <div class="pipe"><div><b>Long-list filters</b><span>Experience, degree level and skills, exported to CSV</span></div></div>
+                                    <div class="pipe"><div><b>Embed</b><span>all-MiniLM-L12-v2 vectors for CVs and the JD</span></div></div>
+                                    <div class="pipe"><div><b>Score</b><span>Cosine similarity + KeyBERT skill overlap × recruiter weights</span></div></div>
+                                    <div class="pipe"><div><b>Rank &amp; return</b><span>Sorted shortlist as JSON, with a CSV copy</span></div></div>
+                                </div>
+                            </div>
+                            <div class="v-panel" id="sc-code" role="tabpanel">
+<pre class="code"><code><span class="c"># app/services/shortlist_service.py</span>
+<span class="k">async def</span> <span class="f">shortlist</span>(*, pdf_id: <span class="t">int</span>, jd_file_bytes: <span class="t">bytes</span>,
+                    jd_filename: <span class="t">str</span>, jd_template: <span class="t">str</span>,
+                    weight_experience: <span class="t">float</span>,
+                    weight_qualifications: <span class="t">float</span>,
+                    weight_skills: <span class="t">float</span>) -&gt; <span class="t">Dict</span>:
+    <span class="s">"""Run shortlist_sync in a thread so the
+    event loop stays free."""</span>
+    <span class="k">return await</span> asyncio.<span class="f">to_thread</span>(
+        shortlist_sync,
+        pdf_id=pdf_id,
+        jd_file_bytes=jd_file_bytes,
+        jd_filename=jd_filename,
+        jd_template=jd_template,
+        weight_experience=weight_experience,
+        weight_qualifications=weight_qualifications,
+        weight_skills=weight_skills,
+    )</code></pre>
+                                <p class="code-cap">CPU-heavy embedding work runs in the default thread pool.</p>
+                            </div>
+                            <div class="v-panel" id="sc-eps" role="tabpanel">
+                                <div class="endpoints">
+                                    <div class="ep"><span class="method m-post">POST</span><span class="ep-path">/api/auth/login</span></div>
+                                    <div class="ep"><span class="method m-post">POST</span><span class="ep-path">/api/auth/login-verify</span></div>
+                                    <div class="ep"><span class="method m-post">POST</span><span class="ep-path">/api/auth/forgot-password</span></div>
+                                    <div class="ep"><span class="method m-get">GET</span><span class="ep-path">/api/auth/me</span></div>
+                                    <div class="ep"><span class="method m-post">POST</span><span class="ep-path">/api/resume/upload-resume</span></div>
+                                    <div class="ep"><span class="method m-post">POST</span><span class="ep-path">/api/resume/save-filtered</span></div>
+                                    <div class="ep"><span class="method m-post">POST</span><span class="ep-path">/api/shortlisting/shortlist</span></div>
+                                    <div class="ep"><span class="method m-patch">PATCH</span><span class="ep-path">/api/users/cv_access</span></div>
+                                    <div class="ep-more">OpenAPI docs at /docs · ReDoc at /redoc</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <div class="group-label" data-group="platform">Production platforms</div>
+
+                    <div class="platform-grid">
+                        <!-- WISH -->
+                        <article class="project card wide reveal" id="wish" data-cat="platform">
+                            <div class="card-visual" aria-hidden="true">
+                                <div class="mv-stages" data-stages>
+                                    <div class="mv-stage"><span class="mv-dot"><svg class="icon"><use href="#i-check"/></svg></span>Lead</div>
+                                    <div class="mv-line"></div>
+                                    <div class="mv-stage"><span class="mv-dot"><svg class="icon"><use href="#i-check"/></svg></span>Proposal</div>
+                                    <div class="mv-line"></div>
+                                    <div class="mv-stage"><span class="mv-dot"><svg class="icon"><use href="#i-check"/></svg></span>Estimate</div>
+                                    <div class="mv-line"></div>
+                                    <div class="mv-stage"><span class="mv-dot"><svg class="icon"><use href="#i-check"/></svg></span>SLA</div>
+                                    <div class="mv-line"></div>
+                                    <div class="mv-stage"><span class="mv-dot"><svg class="icon"><use href="#i-check"/></svg></span>Signed</div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="p-meta">
+                                    <span class="badge badge-soft">Soft-launched internally</span>
+                                    <span class="badge">UNOV</span>
+                                </div>
+                                <h3>WISH</h3>
+                                <p class="p-role">Frontend &amp; API integration · 87 commits</p>
+                                <p class="p-summary">WISH (Workflow Integration &amp; Strategy Harvesting) tracks a client engagement from the first lead through proposal, cost estimate and SLA to a signed agreement.</p>
+                                <ul class="p-points">
+                                    <li>Built the leads, proposals, meetings and <strong>cost &amp; budgeting</strong> modules and wired them to the backend APIs.</li>
+                                    <li>Built the <strong>estimate builder</strong>, audit-log views, permission-gated lists and proposal/SLA version history.</li>
+                                    <li>Built the <strong>document round-trip</strong>: uploaded proposal and SLA documents are parsed back into the record, with removed sections detected. Then the <strong>digital sign-off flow</strong> with signed-PDF download.</li>
+                                </ul>
+                                <div class="chips">
+                                    <span class="chip">Angular 21</span><span class="chip">TypeScript</span><span class="chip">Signals</span><span class="chip">Tailwind 4</span><span class="chip">pdfmake</span><span class="chip">ExcelJS</span>
+                                </div>
+                                <div class="p-links">
+                                    <a class="link-btn" href="https://wish.unov.org" target="_blank" rel="noopener">wish.unov.org <svg class="icon"><use href="#i-arrow"/></svg></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- UNODC TP -->
+                        <article class="project card reveal" id="transparency-portal" data-cat="platform">
+                            <div class="card-visual" aria-hidden="true">
+                                <div class="mv-bars">
+                                    <div class="mv-bar-row"><span>USA</span><span class="mv-bar"><i style="--w:100%"></i></span><span class="v">$623.7M</span></div>
+                                    <div class="mv-bar-row"><span>COL</span><span class="mv-bar"><i style="--w:75%"></i></span><span class="v">$469.6M</span></div>
+                                    <div class="mv-bar-row"><span>EU</span><span class="mv-bar"><i style="--w:53%"></i></span><span class="v">$329.6M</span></div>
+                                    <div class="mv-bar-row"><span>GLB</span><span class="mv-bar"><i style="--w:34%"></i></span><span class="v">$212.3M</span></div>
+                                    <div class="mv-bar-row"><span>JPN</span><span class="mv-bar"><i style="--w:25%"></i></span><span class="v">$154.7M</span></div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="p-meta">
+                                    <span class="badge badge-live">Live · public</span>
+                                    <span class="badge">UNODC</span>
+                                </div>
+                                <h3>UNODC Transparency Portal</h3>
+                                <p class="p-role">Frontend redesign · 18 commits</p>
+                                <p class="p-summary">A public view of who funds UNODC: 389 partners and $2.56B in contributions, explorable by year, country and funding type.</p>
+                                <ul class="p-points">
+                                    <li>Rebuilt the overview and partner pages to match a new Figma design.</li>
+                                    <li>Replaced the partner card grid with a table and built a new partner-detail page.</li>
+                                    <li>Made every page work on phones. For example, trend charts switch to short country names on small screens.</li>
+                                </ul>
+                                <div class="chips">
+                                    <span class="chip">Angular 19</span><span class="chip">ECharts</span><span class="chip">Leaflet</span><span class="chip">SCSS</span>
+                                </div>
+                                <div class="p-links">
+                                    <a class="link-btn" href="https://fadp.ewoke.org/tp/open/overview" target="_blank" rel="noopener">Open portal <svg class="icon"><use href="#i-arrow"/></svg></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- SOMA -->
+                        <article class="project card reveal" id="soma" data-cat="platform">
+                            <div class="card-visual" aria-hidden="true">
+                                <div class="mv-cal">
+                                    <span></span><span class="h">Mon</span><span class="h">Tue</span><span class="h">Wed</span><span class="h">Thu</span><span class="h">Fri</span>
+                                    <span class="t">09</span><span class="c a"></span><span class="c"></span><span class="c b"></span><span class="c a"></span><span class="c"></span>
+                                    <span class="t">11</span><span class="c"></span><span class="c d"></span><span class="c"></span><span class="c"></span><span class="c b"></span>
+                                    <span class="t">13</span><span class="c b"></span><span class="c"></span><span class="c a"></span><span class="c d"></span><span class="c"></span>
+                                    <span class="t">15</span><span class="c"></span><span class="c a"></span><span class="c"></span><span class="c b"></span><span class="c a"></span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="p-meta">
+                                    <span class="badge badge-soft">Launched · pilot next</span>
+                                    <span class="badge">EdTech</span>
+                                </div>
+                                <h3>SOMA</h3>
+                                <p class="p-role">Primary frontend developer · 80+ commits</p>
+                                <p class="p-summary">An academic portal built on top of Moodle. It covers courses and enrolment, attendance, timetables, grades and certificates, library and fees, with separate views for admins, teachers and students.</p>
+                                <ul class="p-points">
+                                    <li>Built <strong>role-based dashboards</strong> for admins, teachers and students, matched to Figma.</li>
+                                    <li>Built attendance and timetable views on FullCalendar, plus library, course-pricing and payment screens wired to the API.</li>
+                                    <li>Added Google and Facebook login, an <strong>inactivity timer that warns before auto-logout</strong>, skeleton loading and Moodle redirect handling.</li>
+                                </ul>
+                                <div class="chips">
+                                    <span class="chip">Angular 19</span><span class="chip">FullCalendar</span><span class="chip">ECharts</span><span class="chip">jsPDF</span>
+                                </div>
+                                <div class="p-links">
+                                    <a class="link-btn" href="http://43.204.47.253/sams/home" target="_blank" rel="noopener">Open SOMA <svg class="icon"><use href="#i-arrow"/></svg></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="group-label" data-group="side">Side projects</div>
+
+                    <div class="mini-grid">
+                        <article class="project mini reveal" id="animekyojin" data-cat="backend side">
+                            <div class="p-meta"><span class="badge badge-live">Public repo</span><span class="badge">Django</span></div>
+                            <h3>AnimeKyojin API</h3>
+                            <p>A Django REST API for tracking and recommending anime. It syncs titles from the AniList GraphQL API into PostgreSQL (indexed, with array fields for genres), stores each user's watch history and favourites, and recommends titles scored against the user's favourite genres. Auth uses SimpleJWT.</p>
+                            <div class="chips"><span class="chip">Django 5</span><span class="chip">DRF</span><span class="chip">PostgreSQL</span><span class="chip">SimpleJWT</span><span class="chip">GraphQL</span></div>
+                            <div class="p-links">
+                                <a class="link-btn" href="https://github.com/TuhsarChaudhary/AnimeKyojin" target="_blank" rel="noopener"><svg class="icon icon-fill"><use href="#i-github"/></svg> Code <svg class="icon"><use href="#i-arrow"/></svg></a>
+                            </div>
+                        </article>
+                        <article class="project mini reveal" id="wealthmgt" data-cat="backend side">
+                            <div class="p-meta"><span class="badge">Spring Boot</span></div>
+                            <h3>WealthMgt API</h3>
+                            <p>An expense-tracking REST API in Java. It has a JWT security filter, JPA entities and repositories, request/response DTOs, monthly and per-category summaries, and a global exception handler.</p>
+                            <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Spring Security</span><span class="chip">JPA</span><span class="chip">MySQL</span></div>
+                            <div class="p-links">
+                                <span class="link-btn is-muted"><svg class="icon"><use href="#i-lock"/></svg> Code on request</span>
+                            </div>
+                        </article>
+                        <article class="project mini reveal" id="movie-rec" data-cat="backend side">
+                            <div class="p-meta"><span class="badge badge-live">Public repo</span><span class="badge">Flask</span></div>
+                            <h3>Movie Recommender</h3>
+                            <p>A Flask app that suggests films based on genre, runtime and mood, showing the director, IMDb rating, a short synopsis and the poster as the background.</p>
+                            <div class="chips"><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">JavaScript</span></div>
+                            <div class="p-links">
+                                <a class="link-btn" href="https://github.com/TuhsarChaudhary/movie-recommendation-app" target="_blank" rel="noopener"><svg class="icon icon-fill"><use href="#i-github"/></svg> Code <svg class="icon"><use href="#i-arrow"/></svg></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stack -->
+        <section class="section" id="stack">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div class="route"><span class="method m-get">GET</span><span class="path">/stack</span></div>
+                    <h2>Tools I <span class="serif">actually</span> use.</h2>
+                    <p class="section-sub">Grouped by how often I use them. No percentage bars.</p>
+                </div>
+                <div class="stack-grid">
+                    <div class="stack-card reveal">
+                        <h3><svg class="icon"><use href="#i-server"/></svg>Backend</h3>
+                        <p>APIs, auth and service design.</p>
+                        <div class="tier"><span class="tier-name">daily</span><div class="chips"><span class="chip strong">Python</span><span class="chip strong">FastAPI</span><span class="chip strong">Node.js</span><span class="chip strong">Express</span><span class="chip strong">REST design</span><span class="chip strong">JWT / OTP auth</span><span class="chip strong">OpenAPI</span></div></div>
+                        <div class="tier"><span class="tier-name">comfortable</span><div class="chips"><span class="chip">Django</span><span class="chip">Django REST Framework</span><span class="chip">Flask</span><span class="chip">Pydantic</span></div></div>
+                        <div class="tier"><span class="tier-name">learning</span><div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Spring Security</span></div></div>
+                    </div>
+                    <div class="stack-card reveal">
+                        <h3><svg class="icon"><use href="#i-db"/></svg>Databases</h3>
+                        <p>Modelling, migrations and queries.</p>
+                        <div class="tier"><span class="tier-name">daily</span><div class="chips"><span class="chip strong">MongoDB</span><span class="chip strong">Aggregation pipelines</span><span class="chip strong">Mongoose</span><span class="chip strong">SQL</span></div></div>
+                        <div class="tier"><span class="tier-name">comfortable</span><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">Alembic</span><span class="chip">Django ORM</span><span class="chip">SQLite</span><span class="chip">MySQL</span><span class="chip">JPA</span></div></div>
+                    </div>
+                    <div class="stack-card reveal">
+                        <h3><svg class="icon"><use href="#i-chart"/></svg>Data &amp; ML</h3>
+                        <p>Cleaning, transforming and ranking data.</p>
+                        <div class="tier"><span class="tier-name">comfortable</span><div class="chips"><span class="chip strong">pandas</span><span class="chip strong">Sentence-Transformers</span><span class="chip strong">KeyBERT</span><span class="chip">scikit-learn</span><span class="chip">pdfminer</span></div></div>
+                        <div class="tier"><span class="tier-name">also</span><div class="chips"><span class="chip">CSV / Excel exports</span><span class="chip">ExcelJS</span><span class="chip">ECharts</span><span class="chip">Regex extraction</span></div></div>
+                    </div>
+                    <div class="stack-card reveal">
+                        <h3><svg class="icon"><use href="#i-layout"/></svg>Frontend (for integration)</h3>
+                        <p>Enough to ship features end-to-end.</p>
+                        <div class="tier"><span class="tier-name">daily</span><div class="chips"><span class="chip strong">Angular 19–21</span><span class="chip strong">TypeScript</span><span class="chip strong">RxJS &amp; Signals</span><span class="chip strong">Tailwind CSS</span></div></div>
+                        <div class="tier"><span class="tier-name">also</span><div class="chips"><span class="chip">Leaflet</span><span class="chip">FullCalendar</span><span class="chip">pdfmake</span><span class="chip">jsPDF</span></div></div>
+                    </div>
+                    <div class="stack-card reveal" style="grid-column:1/-1">
+                        <h3><svg class="icon"><use href="#i-terminal"/></svg>Tooling &amp; AI</h3>
+                        <p>How the work gets done day to day.</p>
+                        <div class="tier"><span class="tier-name">daily</span><div class="chips"><span class="chip strong">Git</span><span class="chip strong">GitHub</span><span class="chip strong">Postman</span><span class="chip strong">Swagger UI</span><span class="chip strong">Claude</span><span class="chip strong">Cursor</span></div></div>
+                        <div class="tier"><span class="tier-name">also</span><div class="chips"><span class="chip">MongoDB Compass</span><span class="chip">DBeaver</span><span class="chip">Windsurf</span><span class="chip">LM Studio (local models)</span><span class="chip">Bitbucket Pipelines</span><span class="chip">Docker basics</span><span class="chip">Linux shell</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <div>
+                        <div class="route"><span class="method m-post">POST</span><span class="path">/contact</span></div>
+                        <h2>Have a backend role or a messy <span class="serif">data problem</span>?</h2>
+                        <p class="section-sub">I'm looking for a junior backend or data role, in Bangalore or remote. Email is the fastest way to reach me.</p>
+                        <div class="hero-cta">
+                            <a class="btn btn-primary" href="mailto:tusharchaudhary161@gmail.com">
+                                <svg class="icon"><use href="#i-mail"/></svg>
+                                Email me
+                            </a>
+                            <button class="btn btn-ghost" data-copy-email>
+                                <svg class="icon"><use href="#i-copy"/></svg>
+                                Copy address
+                            </button>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Me Section (tailored to Quixta) -->
-    <section class="section section-dark" id="experience">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;why-me&gt;</span>
-                <h2 class="section-title">Why I'm The Right Fit</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Backend APIs? Done It.</h3>
-                    <p>
-                        Built and maintained REST APIs across <strong>FastAPI</strong>, <strong>Express.js</strong>, 
-                        and <strong>Django</strong>. From JWT auth to complex aggregation pipelines — I've shipped 
-                        production APIs that real users depend on.
-                    </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>SQL + NoSQL Proficient</h3>
-                    <p>
-                        Written <strong>SQLAlchemy models</strong> with Alembic migrations, 
-                        <strong>MongoDB aggregation pipelines</strong> with $lookup joins, and designed 
-                        normalized schemas with proper indexing.
-                    </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Data + ML Interest</h3>
-                    <p>
-                        Integrated <strong>SBERT & KeyBERT</strong> for semantic matching, built 
-                        <strong>pandas data pipelines</strong> for resume processing, and designed 
-                        file deduplication with SHA-256 hashing.
-                    </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-plug"></i>
-                    </div>
-                    <h3>Integration Experience</h3>
-                    <p>
-                        Connected frontends to backends, integrated third-party APIs, 
-                        set up <strong>Swagger/OpenAPI docs</strong>, and built middleware 
-                        chains for auth, pagination, and error handling.
-                    </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI-Native Developer</h3>
-                    <p>
-                        I use <strong>Claude</strong> and <strong>Cursor</strong> daily — for code 
-                        reviews, debugging, test generation, and rapid prototyping. AI tools are 
-                        part of my development workflow, not an afterthought.
-                    </p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Team-Ready</h3>
-                    <p>
-                        Worked with frontend/mobile developers, wrote comprehensive 
-                        <strong>API documentation</strong>, and maintained clean 
-                        <strong>Git workflows</strong>. I communicate clearly and learn fast.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">&lt;contact&gt;</span>
-                <h2 class="section-title">Let's Connect</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-text">
-                    <p class="contact-intro">
-                        I'm actively looking for my next backend & data engineering role. 
-                        If you'd like to discuss how I can contribute to your team, 
-                        I'd love to hear from you.
-                    </p>
-                    <div class="contact-links">
-                        <a href="mailto:tusharchaudhary161@gmail.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>tusharchaudhary161@gmail.com</span>
+                    <div class="contact-list">
+                        <button class="contact-row" data-copy-email>
+                            <span class="ci"><svg class="icon"><use href="#i-mail"/></svg></span>
+                            <span><span class="cl">Email</span><span class="cv">tusharchaudhary161@gmail.com</span></span>
+                            <span class="ca">copy</span>
+                        </button>
+                        <a class="contact-row" href="https://www.linkedin.com/in/tushar-chaudhary-635781203/" target="_blank" rel="noopener">
+                            <span class="ci"><svg class="icon icon-fill"><use href="#i-linkedin"/></svg></span>
+                            <span><span class="cl">LinkedIn</span><span class="cv">tushar-chaudhary</span></span>
+                            <span class="ca">open ↗</span>
                         </a>
-                        <a href="https://www.linkedin.com/in/tushar-chaudhary-635781203/" target="_blank" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn Profile</span>
+                        <a class="contact-row" href="https://github.com/TuhsarChaudhary" target="_blank" rel="noopener">
+                            <span class="ci"><svg class="icon icon-fill"><use href="#i-github"/></svg></span>
+                            <span><span class="cl">GitHub</span><span class="cv">@TuhsarChaudhary</span></span>
+                            <span class="ca">open ↗</span>
                         </a>
-                        <a href="https://github.com/TuhsarChaudhary" target="_blank" class="contact-link">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Profile</span>
-                        </a>
-                        <a href="tel:+91XXXXXXXXXX" class="contact-link">
-                            <i class="fas fa-phone"></i>
-                            <span>+91 8860117338</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="contact-cta">
-                    <div class="cta-card">
-                        <h3>Interested in working together?</h3>
-                        <p>I'm available for full-time remote positions and open to relocation to Bangalore.</p>
-                        <a href="mailto:tusharchaudhary161@gmail.com" class="btn btn-primary btn-lg">
-                            <i class="fas fa-paper-plane"></i> Send me a message
+                        <a class="contact-row" href="tel:+918860117338">
+                            <span class="ci"><svg class="icon"><use href="#i-phone"/></svg></span>
+                            <span><span class="cl">Phone / WhatsApp</span><span class="cv">+91 88601 17338</span></span>
+                            <span class="ca">call</span>
                         </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <span class="footer-logo">
-                    <span class="logo-bracket">{</span> Tushar Chaudhary <span class="logo-bracket">}</span>
-                </span>
-                <p>Built with passion, deployed with purpose.</p>
-                <div class="footer-social">
-                    <a href="https://github.com/TuhsarChaudhary" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/tushar-chaudhary-635781203/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:tusharchaudhary161@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                </div>
+        <div class="container footer-inner">
+            <span>© <span id="year">2026</span> Tushar Chaudhary · Built with plain HTML, CSS and JavaScript. No framework, no trackers.</span>
+            <div class="footer-links">
+                <a href="https://github.com/TuhsarChaudhary" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/tushar-chaudhary-635781203/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="mailto:tusharchaudhary161@gmail.com">Email</a>
             </div>
         </div>
     </footer>
+
+    <!-- Command palette -->
+    <div class="palette-backdrop" id="palette" role="dialog" aria-modal="true" aria-label="Command menu">
+        <div class="palette">
+            <div class="palette-input-wrap">
+                <svg class="icon"><use href="#i-search"/></svg>
+                <input type="text" id="paletteInput" placeholder="Jump to a section, project or action…" autocomplete="off" spellcheck="false" aria-controls="paletteList">
+                <kbd>Esc</kbd>
+            </div>
+            <div class="palette-list" id="paletteList" role="listbox"></div>
+            <div class="palette-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> move</span><span><kbd>Enter</kbd> select</span><span><kbd>Esc</kbd> close</span></div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <svg class="icon"><use href="#i-check"/></svg>
+        <span id="toastText">Copied</span>
+    </div>
+    <div class="heat-tip" id="heatTip" aria-hidden="true"></div>
 
     <script src="script.js"></script>
 </body>
